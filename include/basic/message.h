@@ -2,3 +2,4 @@
 
 void hello_world();
 void print_version();
+void bla() {}
