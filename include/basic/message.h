@@ -2,4 +2,5 @@
 
 void hello_world();
 
-void print_version();
+void print_version(
+);
