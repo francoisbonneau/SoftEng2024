@@ -10,14 +10,7 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-    - name: Cancel Previous Runs
-      uses: styfle/cancel-workflow-action@main
-      with:
-        access_token: ${{ secrets.TOKEN }}
     - uses: actions/checkout@v4
-    - name: "Get file config"
-      run: |
-        curl -H "Accept: application/vnd.github.VERSION.raw" -H "Authorization: token ${{ secrets.TOKEN }}" https://api.github.com/repos/Geode-solutions/actions/contents/.clang-format\?ref\=master > .clang-format
     - uses: DoozyX/clang-format-lint-action@master
       with:
         extensions: "h,cpp"

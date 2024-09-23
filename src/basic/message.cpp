@@ -5,9 +5,7 @@
 void hello_world()
 {
     for( auto i = 0; i < 10; i++ )
-    {
-        auto j = i + 1;
-    }
+    {        auto j = i + 1;    }
     std::cout << "Hello World!\n";
 }
 
