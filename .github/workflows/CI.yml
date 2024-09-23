@@ -7,15 +7,16 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-    - name: Setup Ninja
-      uses: ashutoshvarma/setup-ninja@master
-      with:
-        # ninja version to download. Default: 1.10.0
-        version: 1.10.0
+    #steps:
+    #- name: Setup Ninja
+    #  uses: ashutoshvarma/setup-ninja@master
+    #  with:
+    #    # ninja version to download. Default: 1.10.0
+    #    version: 1.10.0
     - uses: actions/checkout@v4
     - name: Configure CMake
       run: |
+        apt-get install ninja-build
         mkdir build
         cd build
         cmake -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} ..
